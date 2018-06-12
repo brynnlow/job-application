@@ -4,8 +4,22 @@
     <div class="container">
         <div class="card card-body bg-light">
             <h1>
-                Bienvenue sur la Job Application !
+                Liste des articles
             </h1>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Vat Price</th>
+                </tr>
+                {% for article in article %}
+                    <tr>
+                        <td>{{ article.name }}</td>
+                        <td>{{ article.price }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
 {% endblock %}
